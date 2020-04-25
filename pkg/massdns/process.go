@@ -85,7 +85,7 @@ func (c *Client) runMassDNS(output string, store *store.Store) error {
 	if err != nil {
 		return fmt.Errorf("could not execute massdns: %w\ndetailed error: %s", err, stderr.String())
 	}
-	gologger.Infof("Massdns execution took %s\n", time.Now().Sub(now))
+	gologger.Infof("Massdns execution took %s\n", time.Since(now))
 	return nil
 }
 

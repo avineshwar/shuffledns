@@ -138,7 +138,7 @@ func (r *Runner) processDomain() {
 	inputFile.Close()
 	file.Close()
 
-	gologger.Infof("Generating permutations took %s\n", time.Now().Sub(now))
+	gologger.Infof("Generating permutations took %s\n", time.Since(now))
 
 	// Run the actual massdns enumeration process
 	r.runMassdns(resolveFile)
